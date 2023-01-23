@@ -1,0 +1,8 @@
+./a.out "FOR 42"
+./a.out "FOR 42 "
+./a.out " FOR 42"
+./a.out " FOR 42 "
+./a.out " FOR,42 "
+./a.out "	FOR 42	"
+./a.out "a" "b"
+./a.out ""
