@@ -7,7 +7,7 @@ int *ft_range(int min, int max)
 	int	*tab;
 
 	i = min;
-	while( i <= max)
+	while(i < max)
 	{
 	    size = i++;
 	}
@@ -27,11 +27,11 @@ int *ft_range(int min, int max)
 	}
 	return(tab);
 }
-/*
+
 int main()
 {
-	int min = 100;
-	int max = 100;
+	int min = 0;
+	int max = 10;
 	int *len;
 	int	i;
 
@@ -39,7 +39,7 @@ int main()
 	if(len != NULL)
 	{ 
 		i = min;
-		while(i <= max)
+		while(i < max)
 		{
 			printf("%d ", len[i]);
 			i++;
@@ -47,4 +47,3 @@ int main()
 	}
 	return (0);
 }
-*/
