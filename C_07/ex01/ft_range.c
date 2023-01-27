@@ -6,11 +6,7 @@ int *ft_range(int min, int max)
 	int	i;
 	int	*tab;
 
-	i = min;
-	while(i < max)
-	{
-	    size = i++;
-	}
+	size = max - min;//for min included - max excluded.
 	if(min >= max) //if min >= max program return a NULL
 	{
 		return (NULL);
@@ -20,18 +16,18 @@ int *ft_range(int min, int max)
 		return (NULL);
 	}
 	i = min;
-	while(i <= size)
+	while(i < max)
 	{
 		tab[i] = i;//store all values between min and max to array tab.
 		i++;
 	}
 	return(tab);
 }
-
+/*
 int main()
 {
 	int min = 0;
-	int max = 10;
+	int max = 100;
 	int *len;
 	int	i;
 
@@ -47,3 +43,4 @@ int main()
 	}
 	return (0);
 }
+*/
