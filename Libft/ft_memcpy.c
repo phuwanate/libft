@@ -6,37 +6,20 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:57:42 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/16 12:57:51 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/02/21 14:32:40 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	const char	*s;
-	char		*d;
-	// char		*lasts;
-	// char		*lastd;
+	char	*s;
+	char	*d;
 
-	s = src;
-	d = dst;
-	if ((char *)src != (void *)0 && d != (void *)0)
+	s = (char *)src;
+	d = (char *)dst;
+	if (src != NULL || dst != NULL)
 	{	
-	// 	if (d < s)
-	// 	{
-	// 		while (n--)
-	// 			*d++ = *s++;
-	// 	}
-	// 	else
-	// 	{	
-	// 		lasts = (char *)s + (n - 1);
-	// 		lastd = d + (n - 1);
-	// 		while (n--)
-	// 		{
-	// 			*lastd-- = *lasts--;
-	// 		}
-	// 	}
 		while (n--)
 		{
 			*d++ = *s++;

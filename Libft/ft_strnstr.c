@@ -1,43 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/21 16:10:54 by plertsir          #+#    #+#             */
+/*   Updated: 2023/02/21 16:55:54 by plertsir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    char    *ptr;
-    char    *ptr2;
-    char    *result;
-    size_t	i;
-	int		START;
+	size_t	j;
+	size_t	i;
 
-    i = len;
-    ptr = (char *)haystack;
-    ptr2 = (char *)needle;
-    START = 1;
 	if (!(*needle))
-		return ptr;
-	while (i-- > 0 && *ptr)
-    {
-        if (*ptr2 == *ptr)
-        {    
-            if(START == 1)
-				result = ptr;
-            ptr2++;
-			START = 0;
-        }
-        else if (*ptr2 != *ptr)
-        {
-            ptr2 = (char *)needle ;
-			START = 1;
-        }
-        if (*ptr2 == '\0')
-            return (result);
-        ptr++;
-    }
-    return NULL;
+		return ((char *)haystack);
+	i = 0;
+	while ((len > 0) && (haystack[i]) && (i < len))
+	{
+		j = 0;
+		while ((needle[j]) && (haystack[i + j] == needle[j]) && (i + j < len))
+			j++;
+		if (!needle[j])
+			return ((char *)&haystack[i]);
+		i++;
+	}
+	return (NULL);
 }
-// int main ()
-// {
-// 	char main_string[50] = "lorem ipsum dolor sit amet";
-// 	char search_string[30] = "dolor";
-// 	printf( "%s", ft_strnstr(main_string, search_string, 15));
-// 	return 0;
+// int main() {
+//     char haystack[30] = "aaabcabcd";
+//     char needle[10] = "aabc";
+//     if(ft_strnstr(haystack, "cd", 8) == NULL)
+//         printf("True");
+//     else
+//         printf("False");
+//     return 0;
 // }

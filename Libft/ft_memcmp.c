@@ -1,32 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/21 14:23:37 by plertsir          #+#    #+#             */
+/*   Updated: 2023/02/21 14:31:22 by plertsir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-int     ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    char    *ptr1;
-    char    *ptr2;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 
-    ptr1 = (char *)s1;
-    ptr2 = (char *)s2;
-    while ((*ptr1 || *ptr2) && n-- > 0)
-    {
-        if ((*ptr1 < 32 && *ptr1 >= 127 && *ptr1) 
-			|| (*ptr2 < 32 && *ptr2 >= 127 && *ptr2))//Unprintable and it isn't NULL
-            break;
-        else if((*ptr1 >= 32 && *ptr1 < 127) 
-			|| (*ptr2 >= 32 && *ptr2 < 127))// Only printable
-        {
-            if (*ptr1 != *ptr2)
-                return (*ptr1 - *ptr2);
-        }
-        else// NULL + Printable
-        {
-          if (*ptr1 != *ptr2)
-                return (*ptr2 - *ptr1);
-        }
-        ptr1++;
-        ptr2++;
-    }
-    return(0);
+	ptr1 = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
+	while (n-- > 0)
+	{
+		if (*ptr1 != *ptr2)
+			return (*ptr1 - *ptr2);
+		ptr1++;
+		ptr2++;
+	}
+	return (0);
 }
 // int main()
 // {

@@ -1,35 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/21 15:08:15 by plertsir          #+#    #+#             */
+/*   Updated: 2023/02/21 15:19:27 by plertsir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-size_t  ft_strlcat(char *dst,const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t  result;
-    char    *ptr2;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	k;
+	size_t	n;
 
-    ptr2 = (char *)src;
-    result = 0;
-    while(*dst && dstsize > 0)
-    {
-        dst++;//counting for items in dst.(null is not counted.)
-        result++;
-        dstsize--;//we decrete the dstsize for store the dst in our room.
-    }
-    if(dstsize > 0)//if dstsize != 0 it's mean we still have room for src.
-    {
-        while (*src && dstsize-- > 1)//we check if src have items for store in room(not null)
-            *dst++ = *src++;
-        *dst = '\0';//null terminated.
-        while(*ptr2)
-        {
-            result++;
-            ptr2++;//counting for items in src.(null is not counted.)
-        }
-    }
-    while(*ptr2)//if dstsize is 0 or dst is null we only count items in src.
-    {
-        result++;
-        ptr2++;    
-    }
-    return(result);
+	src_len = ft_strlen(src);
+	if (dstsize == 0 && dst == NULL)
+		return (src_len);
+	dst_len = ft_strlen(dst);
+	if (dst_len >= dstsize)
+		return (dstsize + src_len);
+	k = 0;
+	n = dst_len;
+	while (src[k] != 0 && k < dstsize - dst_len - 1)
+	{
+		dst[n] = src[k];
+		n++;
+		k++;
+	}
+	dst[n] = '\0';
+	return (dst_len + src_len);
 }
 // int main()
 // {
