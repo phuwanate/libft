@@ -25,7 +25,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	while (*ptr)
 		ptr++;
-	ptr--;
 	while (*ptr != *s || *ptr)
 	{
 		if (*ptr == (unsigned char)c)
