@@ -22,14 +22,15 @@ char	*ft_strdup(const char *s1)
 	ptr = (char *)s1;
 	size = ft_strlen(ptr);
 	dst = (char *)malloc(size + 1 * sizeof(char));
-	if (!(dst))
-		return (NULL);
 	result = dst;
-	while (*s1)
+	if (dst)
 	{
-		*dst++ = *s1++;
+		while (*ptr != '\0')
+		{
+			*dst++ = *ptr++;
+		}
+		*dst = '\0';
 	}
-	*dst = '\0';
 	return (result);
 }
 // int main()

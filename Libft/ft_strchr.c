@@ -23,11 +23,11 @@ char	*ft_strchr(const char *s, int c)
 			ptr++;
 		return (ptr);
 	}
-	while (*s != '\0')
+	while (*ptr != '\0')
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (*ptr == (char)c)
+			return ((char *)ptr);
+		ptr++;
 	}
 	return (NULL);
 }

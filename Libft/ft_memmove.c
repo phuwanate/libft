@@ -30,7 +30,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		else
 		{
 			lasts = (char *)s + (len - 1);
-			lastd = d + (len -1);
+			lastd = d + (len - 1);
 			while (len--)
 				*lastd-- = *lasts--;
 		}

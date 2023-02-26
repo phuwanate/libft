@@ -11,44 +11,73 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_str(char *dst , int	nb, int count, int i)
+char	*ft_itostr(char *dst, int nb, int size)
 {
-	dst[i + 1] = '\0';
-	while (i > count++)
+	if (nb < 0)
+		dst[size + 1] = '\0';
+	else
+		dst[size--] = '\0';
+	while (1)
 	{
 		if (nb < 0)
 		{
 			dst[0] = '-';
-			nb = nb * -1;
+			nb *= -1;
 		}
-		else if (nb > 9)
+		if (nb > 9)
 		{
-			dst[i] = nb % 10;
-			nb = nb / 10;
+			dst[size] = (nb % 10) + '0';
+			nb /= 10;
 		}
 		else
-			dst[i] = nb ;
-		i--;
+		{
+			dst[size] = nb + '0' ;
+			break ;
+		}
+		size--;
 	}
 	return (dst);
 }
 
-char	*ft_itoa(int n)
+int	count_n(int count)
 {
-	int		i;
-	int		count;
-	char	*dst;
+	int		size;
 
-	i = 0;
-	count = n;
-	while(count > 0)
+	size = 0;
+	if (count < 0)
+		count *= -1;
+	while (count > 0)
 	{
 		count = count / 10;
-		i++;
+		size++;
 	}
-	dst = (char *)malloc((i +  1) * sizeof(char));
-	if(!dst)
-		return (NULL);
-	ft_str(dst, n, count, i);
-	return(dst);
+	return (size);
 }
+
+char	*ft_itoa(int n)
+{
+	int		size;
+	char	*dst;
+
+	if (n >= 2147483647)
+		return (ft_strdup("2147483647"));
+	else if (n <= -2147483648)
+		return (ft_strdup("-2147483648"));
+	else if (n == 0)
+		return (ft_strdup("0"));
+	size = count_n(n);
+	if (n > 0)
+		dst = (char *)malloc((size + 1) * sizeof(char));
+	else
+		dst = (char *)malloc((size + 2) * sizeof(char));
+	if (dst != NULL)
+		ft_itostr(dst, n, size);
+	return (dst);
+}
+// int main()
+// {
+// 	int s = -1;
+// 	int s2 = 1;
+// 	printf("negative number : %s", ft_itoa(s));
+// 	printf("positive number : %s", ft_itoa(s2));
+// }
