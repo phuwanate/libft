@@ -2,6 +2,30 @@
 // sub_w = count char of each word.
 #include "libft.h"
 
+int	ft_checkmalloc(int sub_s, char **ptr)
+{
+	if (!ptr)
+	{
+		while (sub_s > 0)
+		{
+			sub_s--;
+			free(ptr[sub_s]);
+		}
+		free(ptr);
+		return (1);
+	}
+	return (0);
+}
+
+int	count_char(char const *s, char c, char **ptr, int sub_w)
+{
+	sub_w = 0;
+	while (s[sub_w] != c && s[sub_w] != '\0')
+		sub_w++;
+	*ptr = malloc((sub_w + 1) * sizeof(char));
+	return (sub_w);
+}
+
 int	ft_countword(char const *s, char c)
 {
 	int		i;
@@ -27,16 +51,36 @@ int	ft_countword(char const *s, char c)
 	return (count);
 }
 
-int	count_char(char const *s, char c, char **ptr, int k)
+char	**ft_split(char const *s, char c)
 {
-	k = 0;
-	while (s[k] != c && s[k] != '\0')
-		k++;
-	*ptr = malloc((k + 1) * sizeof(char));
-	return (k);
+	char	**ptr;
+	int		sub_s;
+	int		sub_w;
+
+	if (s == NULL)
+		return (NULL);
+	ptr = ft_calloc((ft_countword(s, c) + 1), sizeof(char *));
+	if (!ptr)
+		return (NULL);
+	sub_s = 0;
+	while (*s != '\0')
+	{
+		if (*s != c && *s != '\0')
+		{
+			sub_w = count_char(s, c, &ptr[sub_s], sub_w);
+			if (ft_checkmalloc(sub_s, ptr) == 1)
+				return (NULL);
+			ft_strlcpy (ptr[sub_s], s, sub_w + 1);
+			s += sub_w;
+			sub_s++;
+		}
+		else
+			s++;
+	}
+	return (ptr);
 }
 
-char	**ft_split(char const *s, char c)
+/*char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	int		i;
@@ -45,8 +89,8 @@ char	**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	ptr = malloc((ft_countword(s, c) + 1) * sizeof(char *));
-	if (!ptr)
+	ptr = ft_calloc((ft_countword(s, c) + 1) , sizeof(char *));
+	if(!ptr)
 		return (NULL);
 	i = 0;
 	sub_s = 0;
@@ -55,12 +99,13 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c && s[i] != '\0')
 		{
 			sub_w = count_char(&s[i], c, &ptr[sub_s], sub_w);
-			ft_strlcpy(ptr[sub_s++], s + i, sub_w + 1);
+			if (ft_checkmalloc(sub_s, ptr) == 1)
+				return (NULL);
+			ft_strlcpy (ptr[sub_s++], s + i, sub_w + 1);
 			i += sub_w;
 		}
 		else
 			i++;
 	}
-	ptr[sub_s] = NULL;
 	return (ptr);
-}
+}*/
