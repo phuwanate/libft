@@ -6,7 +6,7 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 11:55:21 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/21 11:59:02 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:32:58 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -37,10 +37,10 @@ int	ft_atoi(const char *str)
 }
 // int main()
 // {
-// 	printf("Real_atoi out of isspace: %d\n", atoi(" \e475"));
-// 	printf("Fake_atoi out of isspace: %d\n", ft_atoi(" \e475"));
-// 	printf("Real_atoi isspace: %d\n", atoi(" \n\t\v\f\r475"));
-// 	printf("Fake_atoi isspace: %d\n", ft_atoi(" \n\t\v\f\r475"));
-// 	printf("Fake atoi Overflow: %d\n", ft_atoi("2147483649"));
-// 	printf("Fake atoi Underflow: %d", ft_atoi("-2147483649"));
+//  printf("Real_atoi out of isspace: %d\n", atoi(" \e475"));
+//  printf("Fake_atoi out of isspace: %d\n", ft_atoi(" \e475"));
+//  printf("Real_atoi isspace: %d\n", atoi(" \n\t\v\f\r475"));
+//  printf("Fake_atoi isspace: %d\n", ft_atoi(" \n\t\v\f\r475"));
+//  printf("Fake atoi Overflow: %d\n", ft_atoi("2147483649"));
+//  printf("Fake atoi Underflow: %d", ft_atoi("-2147483649"));
 // }
