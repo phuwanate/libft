@@ -6,10 +6,9 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:19:07 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/15 14:21:17 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/02 21:21:04 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 int	ft_isalnum(int s)
@@ -17,9 +16,3 @@ int	ft_isalnum(int s)
 	return ((s >= 'a' && s <= 'z') || (s >= 'A' && s <= 'Z')
 		|| (s >= '0' && s <= '9'));
 }
-// int	main()
-// {
-//     printf("%d\n", isalnum('1'));
-//     printf("%d", ft_isalnum('1'));
-//     return 0;
-// }

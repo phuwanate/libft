@@ -6,7 +6,7 @@
 #    By: plertsir <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/16 17:30:06 by plertsir          #+#    #+#              #
-#    Updated: 2023/03/01 16:52:56 by first            ###   ########.fr        #
+#    Updated: 2023/03/02 14:16:06 by first            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,13 @@ SRC =	ft_bzero.c\
 		ft_strjoin.c\
 		ft_strtrim.c\
 		ft_itoa.c\
-		ft_split.c
+		ft_split.c\
+		ft_strmapi.c\
+		ft_striteri.c\
+		ft_putchar_fd.c\
+		ft_putstr_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c
 
 OBJS = $(SRC:.c=.o)
 

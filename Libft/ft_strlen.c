@@ -6,7 +6,7 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:16:12 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/15 15:32:10 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/02 13:59:42 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
-	i = -1;
-	while (s[++i])
-	{
-	}
+	i = 0;
+	while (s[i])
+		i++;
 	return (i);
 }
 // int main()
