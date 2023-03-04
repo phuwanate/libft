@@ -6,7 +6,7 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:33:17 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/15 14:33:50 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/02 22:08:26 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,3 @@ int	ft_isdigit(int s)
 {
 	return (s >= '0' && s <= '9');
 }
-// int main()
-// {
-//     printf("%d\n", isdigit('0'));
-//     printf("%d", ft_isdigit('0'));
-//     return 0;
-// }
