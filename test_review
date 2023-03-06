@@ -2,7 +2,7 @@
 
 ft_atoi		: 	to convert str string to integer.
 
-ft_bzero	:	to write 0 to string s by.
+ft_bzero	:	to write 0 to string s by n bytes.
 
 ft_calloc	:	to allocate size bytes memmory, the allocated memory is filled with size bytes zero(null) value.
 
