@@ -6,7 +6,7 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:32:54 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/04 15:45:54 by first            ###   ########.fr       */
+/*   Updated: 2023/03/06 20:26:36 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+//----------------------------------PART_1-------------------------------//
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int s);
 int		ft_isalpha(int s);
@@ -46,6 +47,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+//----------------------------------PART_2-------------------------------//
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
@@ -56,6 +58,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+//----------------------------------BONUS-------------------------------//
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
