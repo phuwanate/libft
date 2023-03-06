@@ -79,33 +79,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (ptr);
 }
-
-/*char	**ft_split(char const *s, char c)
-{
-	char	**ptr;
-	int		i;
-	int		sub_s;
-	int		sub_w;
-
-	if (s == NULL)
-		return (NULL);
-	ptr = ft_calloc((ft_countword(s, c) + 1) , sizeof(char *));
-	if(!ptr)
-		return (NULL);
-	i = 0;
-	sub_s = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] != c && s[i] != '\0')
-		{
-			sub_w = count_char(&s[i], c, &ptr[sub_s], sub_w);
-			if (ft_checkmalloc(sub_s, ptr) == 1)
-				return (NULL);
-			ft_strlcpy (ptr[sub_s++], s + i, sub_w + 1);
-			i += sub_w;
-		}
-		else
-			i++;
-	}
-	return (ptr);
-}*/
