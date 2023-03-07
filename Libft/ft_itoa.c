@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:00:30 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/24 15:00:32 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/08 00:27:20 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_itostr(char *dst, int nb, int size)
+char	*ft_convert(char *dst, int nb, int size)
 {
 	if (nb < 0)
 		dst[size + 1] = '\0';
@@ -71,13 +71,6 @@ char	*ft_itoa(int n)
 	else
 		dst = (char *)malloc((size + 2) * sizeof(char));
 	if (dst != NULL)
-		ft_itostr(dst, n, size);
+		ft_convert(dst, n, size);
 	return (dst);
 }
-// int main()
-// {
-// 	int s = -1;
-// 	int s2 = 1;
-// 	printf("negative number : %s", ft_itoa(s));
-// 	printf("positive number : %s", ft_itoa(s2));
-// }

@@ -6,7 +6,7 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 14:23:37 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/21 14:31:22 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/07 23:28:12 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -28,11 +28,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// int main()
-// {
-//     char s1[] = "t\200";
-//     char s2[] = "t\0";
-//     printf("%d\n", ft_memcmp(s1, s2, 2));
-//     printf("real : %d", memcmp("t\200", "t\0", 5));
-//     return 0;
-// }

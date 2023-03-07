@@ -6,7 +6,7 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 14:38:43 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/21 15:06:32 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/07 23:58:21 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -33,10 +33,3 @@ char	*ft_strdup(const char *s1)
 	}
 	return (result);
 }
-// int main()
-// {
-//     char s[] = "ABC";
-//     char *s2 = ft_strdup(s);
-//     printf("%s", s2);
-//     return 0;
-// }

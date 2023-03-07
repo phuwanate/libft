@@ -6,7 +6,7 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:10:54 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/21 16:55:54 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/06 18:47:22 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,12 +30,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-// int main() {
-//     char haystack[30] = "aaabcabcd";
-//     char needle[10] = "aabc";
-//     if(ft_strnstr(haystack, "cd", 8) == NULL)
-//         printf("True");
-//     else
-//         printf("False");
-//     return 0;
-// }

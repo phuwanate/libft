@@ -6,7 +6,7 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:08:15 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/21 15:19:27 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/06 18:01:07 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -35,14 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[n] = '\0';
 	return (dst_len + src_len);
 }
-// int main()
-// {
-//     char first[] = "rrrrrr";
-//     char last[] = "";
-//     int r;
-//     int size = 15;
-
-//     r = ft_strlcat(first,last,size);
-//     printf("%d", r);
-//     return(0);
-// }

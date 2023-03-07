@@ -6,10 +6,10 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:53:30 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/06 17:47:16 by first            ###   ########.fr       */
+/*   Updated: 2023/03/07 23:57:16 by first            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+//FIRST occurance value 'c'.
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -31,11 +31,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-// int main()
-// {
-//     char str[] = "conjour";
-//     char *ptr = strchr(str, 's');
-//     char *ptr2 = ft_strchr(str, 's');
-//     printf("Using Real cefore ft : '%s', After ft : '%s'\n", str, ptr);
-//     printf("Using Fake cefore ft : '%s', After ft : '%s'", str, ptr2);
-// }

@@ -17,8 +17,10 @@ int	ft_checkmalloc(int sub_s, char **ptr)
 	return (0);
 }
 
-int	count_char(char const *s, char c, char **ptr, int sub_w)
+int	count_char(char const *s, char c, char **ptr)
 {
+	int	sub_w;
+
 	sub_w = 0;
 	while (s[sub_w] != c && s[sub_w] != '\0')
 		sub_w++;
@@ -67,7 +69,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (*s != c && *s != '\0')
 		{
-			sub_w = count_char(s, c, &ptr[sub_s], sub_w);
+			sub_w = count_char(s, c, &ptr[sub_s]);
 			if (ft_checkmalloc(sub_s, ptr) == 1)
 				return (NULL);
 			ft_strlcpy (ptr[sub_s], s, sub_w + 1);

@@ -3,17 +3,17 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*currentnode;
-	t_list	*nextnode;
+	t_list	*ptr_lst;
 
 	if (lst == NULL || del == NULL)
 		return ;
 	else if (lst != NULL)
 	{
-		nextnode = *lst;
-		while (nextnode)
+		ptr_lst = *lst;
+		while (ptr_lst)
 		{
-			currentnode = nextnode;
-			nextnode = nextnode->next;
+			currentnode = ptr_lst;
+			ptr_lst = ptr_lst->next;
 			del(currentnode->content);
 			free(currentnode);
 		}
