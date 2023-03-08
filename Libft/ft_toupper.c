@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:47:16 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/21 18:47:21 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:15:04 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_toupper(int c)
@@ -17,9 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-// int	main()
-// {
-// 	printf("Lower to Upper case : %c\n", ft_toupper('c'));
-// 	printf("Unchanged case : %c", ft_toupper('C'));
-// 	return(0);
-// }

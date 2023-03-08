@@ -6,7 +6,7 @@
 /*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 11:35:47 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/08 16:09:33 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:19:15 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	ft_putchar_fd(char c, int fd)
 {
 	if (fd < 0)
-		return (NULL);
+		return ;
 	write(fd, &c, 1);
 }

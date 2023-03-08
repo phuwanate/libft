@@ -6,7 +6,7 @@
 /*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 11:34:24 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/08 16:05:17 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/08 18:17:25 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		currentnode = ft_lstnew((*f)(lst->content));
 		if (!currentnode)
 		{
-			ft_lstclear(&currentnode, del);
+			ft_lstclear(&new_list, del);
 			return (NULL);
 		}	
 		ft_lstadd_back(&new_list, currentnode);
