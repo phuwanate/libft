@@ -6,10 +6,9 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:57:42 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/07 23:33:18 by first            ###   ########.fr       */
+/*   Updated: 2023/03/08 11:35:12 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//overlap no protect.
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)

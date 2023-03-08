@@ -6,10 +6,9 @@
 /*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:42:16 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/07 23:57:50 by first            ###   ########.fr       */
+/*   Updated: 2023/03/08 11:37:33 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//last occurance value 'c'.
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
