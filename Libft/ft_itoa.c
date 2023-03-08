@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:00:30 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/08 00:27:20 by first            ###   ########.fr       */
+/*   Updated: 2023/03/08 16:04:52 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_convert(char *dst, int nb, int size)

@@ -63,6 +63,9 @@ ft_toupper	:	to convert passing 'c' character to upper case if it is lower case.
 ft_tolower	:	to convert passing 'c' character to lowwer case if it is upper case.
 
 ----------------------------------------------------PART 2-------------------------------------------------------------
+file descriptor (fd) :	0 = std input
+						1 = std output
+						2 = std error
 
 ft_substr		: to allocate and return sub string from the string 's' ,The substring begins at index 'start' and maximum
 				size 'len'.

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:16:12 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/02 13:59:42 by first            ###   ########.fr       */
+/*   Updated: 2023/03/08 16:07:42 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-// int main()
-// {
-//     char s[] = "12345";
-//     printf("%zu\n", strlen(s));
-//     printf("%zu", ft_strlen(s));
-// }

@@ -3,21 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:41:58 by plertsir          #+#    #+#             */
-/*   Updated: 2023/02/15 15:06:48 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:04:21 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_isascii(int s)
 {
 	return ((s >= 0) && (s <= 127));
 }
-// int main()
-// {
-//     printf("%d\n", isascii('a')); // €
-//     printf("%d", ft_isascii('8'));// €
-//     return 0;
-// }

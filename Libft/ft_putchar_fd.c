@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plertsir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 11:35:47 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/08 11:35:49 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:09:33 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd < 0)
+		return (NULL);
 	write(fd, &c, 1);
 }
