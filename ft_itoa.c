@@ -6,13 +6,13 @@
 /*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:00:30 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/08 16:04:52 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/23 13:56:34 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_convert(char *dst, int nb, int size)
+static char	*ft_convert(char *dst, int nb, int size)
 {
 	if (nb < 0)
 		dst[size + 1] = '\0';
@@ -40,7 +40,7 @@ char	*ft_convert(char *dst, int nb, int size)
 	return (dst);
 }
 
-int	count_n(int count)
+static int	count_n(int count)
 {
 	int		size;
 

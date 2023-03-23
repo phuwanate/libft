@@ -6,13 +6,13 @@
 /*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:28:16 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/08 16:14:43 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/23 13:57:58 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	check_trim(char const *s, char const *trim)
+static size_t	check_trim(char const *s, char const *trim)
 {
 	size_t	i;
 

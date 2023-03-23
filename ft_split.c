@@ -6,13 +6,13 @@
 /*   By: plertsir <plertsir@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 11:36:37 by plertsir          #+#    #+#             */
-/*   Updated: 2023/03/08 16:07:06 by plertsir         ###   ########.fr       */
+/*   Updated: 2023/03/23 13:57:18 by plertsir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_checkmalloc(int sub_s, char **ptr)
+static int	ft_checkmalloc(int sub_s, char **ptr)
 {
 	if (!ptr)
 	{
@@ -27,7 +27,7 @@ int	ft_checkmalloc(int sub_s, char **ptr)
 	return (0);
 }
 
-int	count_char(char const *s, char c, char **ptr)
+static int	count_char(char const *s, char c, char **ptr)
 {
 	int	sub_w;
 
@@ -38,7 +38,7 @@ int	count_char(char const *s, char c, char **ptr)
 	return (sub_w);
 }
 
-int	ft_countword(char const *s, char c)
+static int	ft_countword(char const *s, char c)
 {
 	int		i;
 	int		count;
